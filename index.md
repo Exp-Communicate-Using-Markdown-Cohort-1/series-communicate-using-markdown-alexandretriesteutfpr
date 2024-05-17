@@ -1,14 +1,35 @@
-# Initial commit
-## reader
-### example
+This is *italic* text.
+This is also _italic_ text.
+This is **bold** text.
+This is also __bold__ text.
+_This is **italic and bold** text_ using a single underscore for italic and double asterisks for bold.
+__This is bold and *italic* text__ using double underscores for bold and single asterisks for italic.
+\_This is all \*\*plain\*\* text\_.
+###### This is H6 text
+![Link an image.](/learn/azure-devops/shared/media/mara.png)
+1. First
+1. Second
+1. Third
+- First
+  - Nested
+- Second
+- Third
 
-![Imagem de um gato feio](https://octodex.github.com/images/yaktocat.png)
+First|Second
+-|-
+1|2
+3|4
+> This is quoted text.
 
+Here is a<br />line break
+
+This is `code`.
+```markdown
+var first = 1;
+var second = 2;
+var sum = first + second;
 ```
-$ git init
-Initialized empty Git repository in /Users/skills/Projects/recipe-repository/.git/
-```
 
-- [x] Turn on GitHub Pages
-- [ ] Outline my portfolio
-- [ ] Introduce myself to the world
+- [x] First task
+- [x] Second task
+- [ ] Third task
