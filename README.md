@@ -1,255 +1,212 @@
-<!--
-  <<< Author notes: Header of the course >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses Creative Commons Attribution 4.0 International.
--->
+O que é o Markdown?
+Concluído
+100 XP
+12 minutos
+Markdown é uma linguagem de marcação que oferece uma abordagem enxuta para edição de conteúdo, protegendo os criadores de conteúdo da sobrecarga do HTML. Embora seja ótimo para renderizar o conteúdo exatamente como ele foi idealizado, o HTML ocupa muito espaço e pode ser difícil de trabalhar, mesmo em pequenas doses. A criação do Markdown trouxe um excelente meio-termo entre o poder do HTML para descrição de conteúdo e a facilidade de texto sem formatação para edição.
 
-# Communicate using Markdown
+Nessa unidade, vamos conversar sobre a estrutura e a sintaxe do Markdown. Também abordaremos recursos do GFM (GitHub-Flavored Markdown), que são extensões de sintaxe que permitem integrar recursos do GitHub ao conteúdo.
 
-_Organize ideas and collaborate using Markdown, a lightweight language for text formatting._
+ Observação
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
+A finalidade desta unidade é dar uma ideia do que é o Markdown. Para uma análise mais detalhada, consulte os artigos "Descrição da sintaxe do Markdown" e "Especificação do Markdown com um sabor de GitHub" na seção Resumo no final desse módulo.
 
-<details id=1 open>
-<summary><h2>Step 1: Add headers</h2></summary>
+Enfatizar texto
+A parte mais importante de qualquer comunicação no GitHub geralmente é o texto em si, mas como você mostra que algumas partes do texto são mais importantes do que outras?
 
-_Welcome to "Communicate using Markdown"! :wave:_
+Para usar itálico no texto, basta colocar o texto de destino entre asteriscos (*) ou sublinhados (_). Não deixe de fechar uma ênfase com o mesmo caractere usado para abri-la. Fique atento ao modo de combinar o uso de asteriscos e sublinhados. Veja os seguintes exemplos:
 
-**What is _Markdown_?** Markdown is a [lightweight syntax](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) for communicating on GitHub. You can format text to add heading, lists, **bold**, _italics_, tables, and many other stylings. You can use Markdown most places around GitHub:
+markdown
 
-- Comments in [issues](https://docs.github.com/issues/tracking-your-work-with-issues/about-issues), [pull requests](https://docs.github.com/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests), and [discussions](https://docs.github.com/discussions/collaborating-with-your-community-using-discussions/about-discussions)
-- Files with the `.md` or `.markdown` extension
-- Sharing snippets of text in [Gists](https://docs.github.com/github/writing-on-github/editing-and-sharing-content-with-gists/creating-gists)
+Copiar
+This is *italic* text.
+This is also _italic_ text.
+Este é um texto em itálico. Esse também é um texto em itálico.
 
-**What is a _header_?** A header is a larger bit of text at the beginning of a section. There are six sizes.
+Crie texto em negrito usando dois asteriscos (**) ou dois sublinhados (__).
 
-### Example
+markdown
 
-```md
-# This is an `<h1>` header, which is the largest
-## This is an `<h2>` header
-###### This is an `<h6>` header, which is the smallest
+Copiar
+This is **bold** text.
+This is also __bold__ text.
+Este é um texto em negrito. Este também é um texto em negrito.
+
+Você também pode misturar tipos de ênfase diferentes.
+
+markdown
+
+Copiar
+_This is **italic and bold** text_ using a single underscore for italic and double asterisks for bold.
+__This is bold and *italic* text__ using double underscores for bold and single asterisks for italic. 
+Este é um texto em itálico e negrito usando um só sublinhado para itálico e dois asteriscos para negrito. Este é um texto em negrito e itálico usando dois sublinhados para negrito e um asterisco para itálico.
+
+Para usar um asterisco literal, preceda-o com um caractere de escape, que no GFM é uma barra invertida (\). Este exemplo resulta em sublinhados e asteriscos sendo mostrados na saída.
+
+markdown
+
+Copiar
+\_This is all \*\*plain\*\* text\_.
+_Tudo isto é um texto *sem formatação**_.
+
+Declarar títulos
+O HTML fornece títulos de conteúdo, como a tag <h1>. Em Markdown, isso tem suporte por meio do símbolo #. Basta usar um # para cada nível de título de 1 a 6.
+
+markdown
+
+Copiar
+###### This is H6 text
+Este é o texto H6
+Criar links para imagens e sites
+Os links para imagens e sites usam uma sintaxe semelhante.
+
+markdown
+
+Copiar
+![Link an image.](/learn/azure-devops/shared/media/mara.png)
+Link an image.
+
+markdown
+
+Copiar
+[Link to Microsoft Training](/training)
+Link para o Microsoft Training
+
+Criar listas
+Você pode definir listas ordenadas ou não ordenadas. Você também pode definir itens aninhados por meio de recuos.
+
+As listas ordenadas começam com números.
+As listas não ordenadas podem usar asteriscos ou traços (-).
+Aqui está o Markdown de uma lista ordenada:
+
+markdown
+
+Copiar
+1. First
+1. Second
+1. Third
+Resultado:
+
+Primeiro
+Segundo
+Terceiro
+markdown
+
+Copiar
+- First
+  - Nested
+- Second
+- Third
+Aqui está o Markdown de uma lista não ordenada:
+
+Primeiro
+Aninhado
+Segundo
+Terceiro
+Criar tabelas
+Você pode construir tabelas usando uma combinação de barras verticais (|) para quebras de coluna e traços (-) para designar a linha anterior como um cabeçalho.
+
+markdown
+
+Copiar
+First|Second
+-|-
+1|2
+3|4
+Primeiro	Segundo
+1	2
+3	4
+Texto da citação
+Você pode criar blockquotes usando o caractere maior que (>).
+
+markdown
+
+Copiar
+> This is quoted text.
+Este é um texto de referência.
+
+Preencher as lacunas com HTML incorporado
+Se você se deparar com uma situação de HTML que não é compatível com o Markdown, você pode usar o HTML incorporado.
+
+markdown
+
+Copiar
+Here is a<br />line break
+Esta é uma
+quebra de linha
+
+Trabalhe com código
+O Markdown fornece um comportamento padrão para trabalhar com blocos de código embutidos delimitados pelo caractere de crase (`). Ao ser decorado com esse caractere, o texto é renderizado como código.
+
+markdown
+
+Copiar
+This is `code`.
+Este é um code.
+
+Se tiver um segmento de código que abrange várias linhas, você poderá usar três crases (```) antes e depois para criar um bloco de código isolado.
+
+
+Copiar
+```markdown
+var first = 1;
+var second = 2;
+var sum = first + second;
 ```
 
-#### How it looks
+Copiar
+var first = 1;
+var second = 2;
+var sum = first + second;
+O GFM estende esse suporte com realce de sintaxe para linguagens populares. Basta especificar a linguagem como parte da primeira sequência de crases.
 
-# This is an `<h1>` header, which is the largest
-## This is an `<h2>` header
-###### This is an `<h6>` header, which is the smallest
 
-### :keyboard: Activity: Edit your file with headers
-
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Open the **pull requests** tab.
-1. Click **New pull request**, for the branches to compare, select `base: main` and `compare: start-markdown`.
-1. Click **Create pull request**.
-1. In this pull request, go to the **Files changed** tab. We made an empty file `index.md` for you.
-1. Select **Edit file** from the three dotted **...** menu in the upper right corner of the file view on `index.md`.
-1. On the **Edit file** tab, add a `#`, followed by a **space**, before any content you like to make it an H1 Header. You can add more headers, using one to six `#` characters followed by a **space**.
-1. Above your new content, click **Preview**.
-1. Type a short, meaningful commit message that describes the change you made to the file.
-1. Select Commit directly to the start-markdown branch.
-1. Click **Commit changes**.
-1.  Wait about 20 seconds then refresh this page for the next step.
-
-</details>
-
-<!--
-  <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
--->
-
-<details id=2>
-<summary><h2>Step 2: Add an image</h2></summary>
-
-_Great job adding headers to the file :sparkles:_
-
-Let's add an image. Include descriptive text in the square brackets. This text is read aloud for people using screen readers. It's also shown at times when your image doesn't display, such as when there's a poor connection. You can see the syntax for images below:
-
-### Example
-
-```md
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+Copiar
+```javascript
+var first = 1;
+var second = 2;
+var sum = first + second;
 ```
+JavaScript
 
-#### How it looks
+Copiar
+var first = 1;
+var second = 2;
+var sum = first + second;
+Problemas de referência cruzada e solicitações de pull
+O GFM é compatível com o uso de uma variedade de formatos de código curto para facilitar a criação de links para problemas e solicitações de pull. A maneira mais fácil de fazer isso é usar o formato #ID, como #3602. O GitHub ajustará automaticamente os links mais longos para esse formato se você quiser colá-los. Você também poderá seguir convenções adicionais, por exemplo, se estiver trabalhando com outras ferramentas ou se quiser especificar outros projetos/branches.
 
-<img alt="Image of Yaktocat" src=https://octodex.github.com/images/yaktocat.png width=400>
+Tipo de referência	Referência bruta	Link curto
+URL do problema ou da solicitação de pull	https://github.com/desktop/desktop/pull/3602	#3602
+# e o número do problema ou da solicitação de pull	#3602	#3602
+GH- e o número do problema ou da solicitação de pull	GH-3602	GH-3602
+Username/Repository# e o número do problema ou da solicitação de pull	desktop/desktop#3602	desktop/desktop#3602
+Para obter mais informações, consulte o artigo "Referências e URLs com links automáticos" na unidade Resumo no final desse módulo.
 
-### :keyboard: Activity: Adding an image
+Links para commits específicos
+Você pode criar um link para um commit colando a respectiva ID ou, simplesmente, usando o respectivo algoritmo de hash seguro (SHA).
 
-1. As you did before, edit the `index.md` file in this pull request.
-1. In the file, add the correct Markdown for your image of choice. Don't forget to include alt-text!
-1. Use the **Preview** tab to check your Markdown formatting.
-1. Commit your changes.
-1. Wait about 20 seconds then refresh this page for the next step.
+Tipo de referência	Referência bruta	Link curto
+URL da confirmação	https://github.com/desktop/desktop/commit/	
+8304e9c271a5e5ab4fda797304cd7bcca7158c87	8304e9c	
+SHA	8304e9c271a5e5ab4fda797304cd7bcca7158c87	8304e9c
+User@SHA	desktop@8304e9c271a5e5ab4fda797304cd7bcca7158c87	desktop@8304e9c
+Username/Repository@SHA	desktop/desktop@8304e9c271a5e5ab4fda797304cd7bcca7158c87	desktop/desktop@8304e9c
+Mencionar usuários e equipes
+Digitar um símbolo @ seguido de um nome de usuário do GitHub enviará a essa pessoa uma notificação relativa ao comentário. Isso é chamado de uma "@menção", porque você está mencionando o indivíduo. Você também pode usar @mention com equipes dentro de uma organização.
 
-</details>
+markdown
 
-<!--
-  <<< Author notes: Step 3 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
--->
+Copiar
+@githubteacher
+@githubteacher
 
-<details id=3>
-<summary><h2>Step 3: Add a code example</h2></summary>
+Monitorar listas de tarefas
+Você pode criar listas de tarefas dentro de problemas ou solicitações de pull usando a sintaxe abaixo. Isso pode ser útil para acompanhar o progresso quando usado no corpo de um problema ou solicitação de pull.
 
-_Great job adding an image to the file :tada:_
+markdown
 
-In addition to code blocks, some code blocks should be rendered differently depending on the language, such as JavaScript or command-line text.
-
-### Example
-
-<pre>
-```
-$ git init
-Initialized empty Git repository in /Users/skills/Projects/recipe-repository/.git/
-```
-</pre>
-
-#### How it looks
-
-```
-$ git init
-Initialized empty Git repository in /Users/skills/Projects/recipe-repository/.git/
-```
-
-### :keyboard: Activity: Adding a code example
-
-1. As you did before, edit the file in this pull request.
-1. In the file, add the correct Markdown for a code example of your choice.
-1. Use the **Preview** tab to check your Markdown formatting.
-1. Commit your changes.
-1. Wait about 20 seconds then refresh this page for the next step.
-
-</details>
-
-<!--
-  <<< Author notes: Step 4 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
--->
-
-<details id=4>
-<summary><h2>Step 4: Make a task list</h2></summary>
-
-_Great job adding a code example to the file :partying_face:_
-
-**What is a _task list_?** A task list creates checkboxes to check off. They're very useful for tracking issues and pull requests. If you include a task list in the body of an issue or pull request, you'll see a progress indicator in your issue list. The syntax for task lists is very specific. Be sure to include the spaces where required, or else they won't render.
-
-### Example
-
-```
-- [x] List syntax is required
-- [x] This item is complete
-- [ ] This item is not complete
-```
-
-#### How it looks
-
-- [x] List syntax is required
-- [x] This item is complete
-- [ ] This item is not complete
-
-### :keyboard: Activity: Add a task list
-
-GitHub Actions went ahead and made a branch for you. So you'll need to add to the file we've created in the branch, and we will check your work as you work through this course!
-
-1. Return to your pull request.
-1. Use Markdown to create a task list. Here is an example:
-
-   ```md
-   - [ ] Turn on GitHub Pages
-   - [ ] Outline my portfolio
-   - [ ] Introduce myself to the world
-   ```
-
-   Remember, a task list starts with the syntax `- [ ]` and then the task list item. The formatting is specific!
-
-1. Use the **Preview** tab to check your Markdown formatting.
-1. Commit the changes to the file.
-1. Wait about 20 seconds then refresh this page for the next step.
-
-</details>
-
-<!--
-  <<< Author notes: Step 5 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
--->
-
-<details id=5>
-<summary><h2>Step 5: Merge your pull request</h2></summary>
-
-_Great job adding a task list to the file :heart:_
-
-You can now [merge](https://docs.github.com/get-started/quickstart/github-glossary#merge) your pull request!
-
-### :keyboard: Activity: Merge your pull request
-
-1. Under your repository name, click Pull requests.
-   ![repo-tabs-pull-requests](https://github.com/Exp-Communicate-Using-Markdown-Cohort-1/series-communicate-using-markdown/assets/107881423/a5351683-be08-4f46-83b4-864dae00c70a)
-
-1. In the “Pull Requests” list, click the pull request you’d like to merge.
-1. Scroll down to the bottom of the pull request Click **Merge pull request**.
-   ![merge PR](https://github.com/Exp-Communicate-Using-Markdown-Cohort-1/series-communicate-using-markdown/assets/107881423/7dfd1089-7ad1-4e49-b18b-e2630d05cf14)
-
-1. Wait about 20 seconds then refresh this page for the next step.
-
-</details>
-
-<!--
-  <<< Author notes: Finish >>>
-  Review what we learned, ask for feedback, provide next steps.
--->
-
-<details id=X>
-<summary><h2>Finish</h2></summary>
-
-_Congratulations friend, you've completed this course!_
-
-<img src=https://octodex.github.com/images/welcometocat.png alt=celebrate width=300 align=right>
-
-Here's a recap of all the tasks you've accomplished in your repository:
-
-1. You learned about Markdown, headings, images, code examples, and task lists.
-1. You created and merged a Markdown file.
-1. You learned an essential GitHub skill. 🎉
-
-### What's next?
-
-- You can enable GitHub Pages and see your Markdown file as a website!
-  1. Under your repository name at the upper right, click :gear: **Settings**.
-  1. Then on the lower left, click **Pages** in the **Code and automation** section.
-  1. In the **GitHub Pages** section, ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu as your GitHub Pages publishing source.
-  1. Click the **Save** button.
-  1. Wait about 30 seconds then refresh the page. When you see "Your site is published at ..." you can click on the link to see your published site.
-- Learn more about [Markdown](https://docs.github.com/github/writing-on-github).
-- We'd love to hear what you thought of this course [in our discussion board](https://github.com/skills/.github/discussions)
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
-
-### Author
-#### Alexandre Trieste
-</details>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/community/discussions/categories/github-education) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2022 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+Copiar
+- [x] First task
+- [x] Second task
+- [ ] Third task
+A GitHub task list.
